@@ -44,14 +44,9 @@ const HeroSection = () => {
           </p>
         </div>
         <div className="flex justify-center space-x-4">
-          <Link href="https://www.youtube.com">
+          <Link href="https://teachus.vercel.app/sign-in?after_sign_in_url=https%3A%2F%2Fteachus.vercel.app%2Fonboarding&after_sign_up_url=https%3A%2F%2Fteachus.vercel.app%2Fonboarding&redirect_url=https%3A%2F%2Fteachus.vercel.app%2F">
             <Button size="lg" className="px-8">
               Get Started
-            </Button>
-          </Link>
-          <Link href="https://www.youtube.com/watch?v=UbXpRv5ApKA&t=1500s">
-            <Button size="lg" className="px-8" variant="outline">
-              Watch Demo
             </Button>
           </Link>
         </div>
