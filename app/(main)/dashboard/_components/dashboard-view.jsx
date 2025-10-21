@@ -1,12 +1,32 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
-import { format, formatDistanceToNow } from "date-fns";
-import { Brain, BriefcaseIcon, LineChart, TrendingDown, TrendingUp } from "lucide-react";
 import React from "react";
-import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
+import {
+  BriefcaseIcon,
+  LineChart,
+  TrendingUp,
+  TrendingDown,
+  Brain,
+} from "lucide-react";
+import { format, formatDistanceToNow } from "date-fns";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
 
 const DashboardView = ({ insights }) => {
   // Transform salary data for the chart
@@ -17,7 +37,6 @@ const DashboardView = ({ insights }) => {
     median: range.median / 1000,
   }));
 
-  
   const getDemandLevelColor = (level) => {
     switch (level.toLowerCase()) {
       case "high":
@@ -31,7 +50,6 @@ const DashboardView = ({ insights }) => {
     }
   };
 
-  
   const getMarketOutlookInfo = (outlook) => {
     switch (outlook.toLowerCase()) {
       case "positive":
@@ -44,11 +62,10 @@ const DashboardView = ({ insights }) => {
         return { icon: LineChart, color: "text-gray-500" };
     }
   };
-  
+
   const OutlookIcon = getMarketOutlookInfo(insights.marketOutlook).icon;
   const outlookColor = getMarketOutlookInfo(insights.marketOutlook).color;
 
-  
   // Format dates using date-fns
   const lastUpdatedDate = format(new Date(insights.lastUpdated), "dd/MM/yyyy");
   const nextUpdateDistance = formatDistanceToNow(
@@ -56,12 +73,13 @@ const DashboardView = ({ insights }) => {
     { addSuffix: true }
   );
 
-    return (
+  return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <Badge variant="outline">Last updated: {lastUpdatedDate}</Badge>
-       </div>
-       {/* Market Overview Cards */}
+      </div>
+
+      {/* Market Overview Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -78,8 +96,6 @@ const DashboardView = ({ insights }) => {
           </CardContent>
         </Card>
 
-
-        
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
@@ -95,8 +111,6 @@ const DashboardView = ({ insights }) => {
           </CardContent>
         </Card>
 
-
-        
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Demand Level</CardTitle>
@@ -111,7 +125,6 @@ const DashboardView = ({ insights }) => {
             />
           </CardContent>
         </Card>
-
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -129,6 +142,7 @@ const DashboardView = ({ insights }) => {
           </CardContent>
         </Card>
       </div>
+
       {/* Salary Ranges Chart */}
       <Card className="col-span-4">
         <CardHeader>
@@ -170,7 +184,6 @@ const DashboardView = ({ insights }) => {
         </CardContent>
       </Card>
 
-      
       {/* Industry Trends */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Card>
@@ -208,11 +221,8 @@ const DashboardView = ({ insights }) => {
           </CardContent>
         </Card>
       </div>
-
-
-
-      </div>
-      );
- };
+    </div>
+  );
+};
 
 export default DashboardView;
