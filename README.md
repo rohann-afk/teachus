@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎓 TeachUs — AI-Powered Career & Learning Platform
 
-## Getting Started
+> An intelligent, all-in-one platform that helps you **learn, grow, and advance your career** — powered by AI.
 
-First, run the development server:
+![TeachUs Banner](https://github.com/rohann-afk/teachus/blob/main/public/logo.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Overview
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+**TeachUs** is a full-stack web application built to empower both learners and professionals.  
+It connects **educators** and **students**, while also helping users with **career assessment**, **interview preparation**, and **AI-generated resumes & cover letters**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Powered by **Gemini AI**, it transforms learning into a personalized and career-driven experience.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Tech Stack
 
-## Deploy on Vercel
+| Layer | Technologies |
+|-------|---------------|
+| **Frontend** | [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/) |
+| **Backend** | [Prisma ORM](https://www.prisma.io/), [Neon (PostgreSQL)](https://neon.tech/), [Inngest](https://www.inngest.com/) |
+| **AI Integration** | [Gemini API](https://ai.google.dev/gemini-api) |
+| **Authentication** | [Clerk](https://clerk.com/) |
+| **Deployment** | [Vercel](https://vercel.com/) |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧠 Core Features
+
+### 🧑‍🏫 Learning & Teaching
+- Create and manage **interactive courses**
+- Track progress and learning analytics
+- Personalized content and quiz generation via **Gemini AI**
+
+### 💼 Career Assessment
+- AI analyzes your skills, strengths, and career path  
+- Get detailed insights on **which careers fit your profile best**
+
+### 🎯 Interview Preparation
+- Practice mock interviews with AI-generated questions  
+- Get real-time feedback and improvement tips  
+- Covers both **technical** and **behavioral** interviews
+
+### 📄 Resume Builder
+- Instantly generate professional resumes  
+- Customize content based on your experience and career goals  
+- Export-ready formats for quick use
+
+### 📨 Cover Letter Generator
+- AI creates tailored cover letters for each job role  
+- Ensures tone, relevance, and professionalism  
+
+### 🔐 Secure & Scalable
+- Authentication via **Clerk**
+- Background processes handled with **Inngest**
+- Database powered by **Neon PostgreSQL**
+- CI/CD deployment on **Vercel**
+
+---
+
+## 📺 Demo
+ 
+🌐 **Live App:** [teachus.vercel.app](https://teachus.vercel.app/) *(if deployed)*
+
+---
+
+
